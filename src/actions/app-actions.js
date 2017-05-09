@@ -15,7 +15,7 @@ export const getDegreeDoneAction = (response) => ({
 
 export const getDegree = (searchData) => {
   appStore.dispatch(getDegreeRequestAction());
-  fetch('https://calm-brook-18967.herokuapp.com/api/getDegree', {
+  fetch('https://localhost:8080/api/getDegree', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
