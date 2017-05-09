@@ -1,8 +1,6 @@
 import {appStore} from '../app-store';
 import 'whatwg-fetch';
 
-// var fetch;
-
 export const getDegreeRequestAction = () => ({
   type: 'GET_DEGREE_REQUEST',
   response: []
@@ -15,7 +13,7 @@ export const getDegreeDoneAction = (response) => ({
 
 export const getDegree = (searchData) => {
   appStore.dispatch(getDegreeRequestAction());
-  fetch('https://localhost:8080/api/getDegree', {
+  fetch('http://localhost:8080/api/getDegree', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
